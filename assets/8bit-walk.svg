@@ -3,19 +3,36 @@
      viewBox="0 0 160 80" width="320" height="160"
      shape-rendering="crispEdges">
   <style>
-    svg { background:#87ceeb; } /* sky blue */
+    svg { background:#87ceeb; } /* sky blue background */
     .ground { animation: movebg 4s linear infinite; }
     .mando { animation: walk 4s linear infinite; }
+    .caption {
+      font-family: monospace;
+      font-size: 4px;
+      fill: #1f2937;
+      text-anchor: middle;
+      animation: fadein 2s ease-in-out infinite alternate;
+    }
+
+    /* Background movement */
     @keyframes movebg {
       from { transform: translateX(0); }
       to   { transform: translateX(-20); }
     }
+
+    /* Mandalorian walking motion */
     @keyframes walk {
       0%   { transform: translateX(-20px) translateY(0); }
       25%  { transform: translateX(40px) translateY(-1px); }
       50%  { transform: translateX(80px) translateY(0); }
       75%  { transform: translateX(120px) translateY(-1px); }
       100% { transform: translateX(160px) translateY(0); }
+    }
+
+    /* Text fading animation */
+    @keyframes fadein {
+      from { opacity: 0.3; }
+      to   { opacity: 1; }
     }
   </style>
 
@@ -46,6 +63,9 @@
     <rect x="5" y="11" width="6" height="1" fill="#1f2933"/>
     <rect x="6" y="12" width="4" height="1" fill="#0f1720"/>
   </g>
+
+  <!-- Caption text -->
+  <text x="80" y="20" class="caption">this is my file extension .svg</text>
 
   <title>8-bit Mandalorian walking horizontally</title>
 </svg>
