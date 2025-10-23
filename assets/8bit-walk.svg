@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 160 80" width="320" height="160"
+     shape-rendering="crispEdges">
+  <style>
+    svg { background:#87ceeb; } /* sky blue */
+    .ground { animation: movebg 4s linear infinite; }
+    .mando { animation: walk 4s linear infinite; }
+    @keyframes movebg {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-20); }
+    }
+    @keyframes walk {
+      0%   { transform: translateX(-20px) translateY(0); }
+      25%  { transform: translateX(40px) translateY(-1px); }
+      50%  { transform: translateX(80px) translateY(0); }
+      75%  { transform: translateX(120px) translateY(-1px); }
+      100% { transform: translateX(160px) translateY(0); }
+    }
+  </style>
+
+  <!-- Ground pattern -->
+  <g class="ground">
+    <rect y="60" width="200" height="20" fill="#c2b280"/>
+    <rect y="60" width="200" height="1" fill="#a68d5a"/>
+  </g>
+
+  <!-- 8-bit Mandalorian -->
+  <g class="mando" transform="translate(0,44) scale(2)">
+    <!-- helmet -->
+    <rect x="4" y="0" width="8" height="1" fill="#000"/>
+    <rect x="3" y="1" width="10" height="1" fill="#000"/>
+    <rect x="2" y="2" width="12" height="1" fill="#000"/>
+    <rect x="2" y="3" width="12" height="1" fill="#4b5563"/>
+    <rect x="1" y="4" width="2" height="1" fill="#000"/>
+    <rect x="3" y="4" width="10" height="1" fill="#2f3740"/>
+    <rect x="13" y="4" width="2" height="1" fill="#000"/>
+    <rect x="1" y="5" width="1" height="1" fill="#000"/>
+    <rect x="2" y="5" width="12" height="1" fill="#253139"/>
+    <rect x="14" y="5" width="1" height="1" fill="#000"/>
+    <rect x="3" y="6" width="10" height="1" fill="#0aa3a3"/>
+    <rect x="2" y="7" width="12" height="1" fill="#253139"/>
+    <rect x="2" y="8" width="12" height="1" fill="#4b5563"/>
+    <rect x="3" y="9" width="10" height="1" fill="#2f3740"/>
+    <rect x="4" y="10" width="8" height="1" fill="#000"/>
+    <rect x="5" y="11" width="6" height="1" fill="#1f2933"/>
+    <rect x="6" y="12" width="4" height="1" fill="#0f1720"/>
+  </g>
+
+  <title>8-bit Mandalorian walking horizontally</title>
+</svg>
